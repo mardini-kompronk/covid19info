@@ -1,0 +1,94 @@
+@import './color.scss';
+
+header {
+    width: 100%;
+    background-color: $primary;
+    nav {
+        width: 1024px;
+        max-width: 100%;
+        background-color: $primary;
+        color: $light;
+        padding: .5rem 1rem;
+        margin: 0 auto;
+        .logo {
+            display: flex;
+            align-items: center;
+             svg {
+                display: block;
+                font-size: 2rem;
+                fill: $light;
+                margin-right: .5rem;
+            }
+            span {
+                display: block;
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .hero-section {
+        background-color: $secondary;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        @media screen and (max-width: 650px) {
+            flex-direction: column-reverse;
+        }
+        .hero-text {
+            color: $light;
+            min-width: 300px;
+            max-width: 500px;
+            width: 30%;
+            font-size: 1.2rem;
+            font-weight: 800;
+            animation: movetotop .6s 1s linear backwards;
+            @media screen and (max-width: 650px) {
+                font-size: 1.1rem;
+                margin-top: 3rem;
+            }
+            .hero-btn {
+                cursor: pointer;
+                padding: .5rem 3rem;
+                margin-top: 2rem;
+                color: $primary;
+                font-weight: 600;
+                font-size: 1.1rem;
+                border: none;
+                border-radius: 3px;
+                transition: .6s;
+                &:hover {
+                    background-color: $primary;
+                    color: $light;
+                }
+            }
+        }
+        .hero-img {
+            min-width: 300px;
+            max-width: 500px;
+            width: 40%;
+            animation: movetoleft .7s 1s linear backwards;
+        }
+    }
+}
+
+// animations
+@keyframes movetoleft {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movetotop {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

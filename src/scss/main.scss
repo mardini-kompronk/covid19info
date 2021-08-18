@@ -1,0 +1,40 @@
+main {
+    background-color: $primary;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
+        padding: 1rem;
+        background-color: $light;
+        max-width: 300px;
+        min-width: 50%;
+        border-radius: 3px;
+        strong, p {
+            color: $primary;
+        }
+        div {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            #input {
+                width: 80%;
+                padding: .4rem .5rem;
+                border: none;
+                margin: 0 2px;
+                &:focus {
+                    outline: 1px solid $primary;
+                }
+            }
+            #cari {
+                cursor: pointer;
+                padding: .4rem 1.5rem;
+                border: none;
+                background-color: $primary;
+                color: $light;
+            }
+        }
+    }
+}

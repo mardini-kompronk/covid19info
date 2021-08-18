@@ -1,0 +1,27 @@
+footer {
+    width: 100%;
+    background-color: $primary;
+    text-align: center;
+    ul {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        background-color: $secondary;
+        li {
+            margin: 0 10px;
+        }
+        a {
+            color: $light;
+            font-size: 1.2rem;
+        }
+       
+    }
+    span {
+        color: $light;
+        font-size: 1.2rem;
+        display: block;
+        padding: 1rem 0;
+    }
+}
